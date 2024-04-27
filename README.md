@@ -4,7 +4,7 @@ ESP8266 SDK and compile the code for testing, LoRa experiment without LoRa modem
 ref: https://github.com/espressif/ESP8266_RTOS_SDK
 
 Linux is used (ie. ubutnu for Windows, WSL)  
-###ESP8266_RTOS_SDK, tool chain setup,
+### ESP8266_RTOS_SDK, tool chain setup,
 ```
 mkdir esp
 cd esp
