@@ -46,7 +46,7 @@ ls- l
 ref: https://learn.microsoft.com/en-us/windows/wsl/connect-usb, !!!note: microsoft doc & instruction was no complete correctness!!!  
 ubuntu WSL must be open before this procedure !  
 
-open powershell as admin, follow commands following (my esp8266 & com port is at COM13, 'usbipd list' shows busid 4-2)  
+open powershell as admin, follow commands following (my esp8266 & com port is at CH340 / COM13, 'usbipd list' shows busid 4-2)  
 ```
 usbipd list
 usbipd bind --force --busid 4-2
@@ -58,5 +58,9 @@ usbipd wsl detach --busid 4-2
 WSL ubuntu command prompt, com13 mapped to USB bus 001 device 002
 ```
 lsusb
+dmesg | grep -i serial
+dmesg | grep -i usb
+
 ```
 ![usbip_com13_setup.JPG](usbip_com13_setup.JPG)  
+![get_CH340_VID_PID.JPG](get_CH340_VID_PID.JPG)  
