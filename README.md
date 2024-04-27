@@ -7,7 +7,7 @@ tool chain,
 ```
 mkdir esp
 cd esp
-git clon https://github.com/espressif/ESP8266_RTOS_SDK
+git clone --recurse-submodules https://github.com/espressif/ESP8266_RTOS_SDK
 git clone https://github.com/cpq/esputil
 cd esputil
 make
