@@ -41,3 +41,22 @@ ls- l
 ```
 ![example_125k_raw_done.JPG](example_125k_raw_done.JPG)  
 
+
+### WSL and com port setup
+ref: https://learn.microsoft.com/en-us/windows/wsl/connect-usb, !!!note: microsoft doc & instruction was no complete correctness!!!  
+ubuntu WSL must be open before this procedure !  
+
+open powershell as admin, follow commands following (my esp8266 & com port is at COM13, 'usbipd list' shows busid 4-2)  
+```
+usbipd list
+usbipd bind --force --busid 4-2
+usbipd wsl attach --busid 4-2
+or
+usbipd wsl detach --busid 4-2
+```
+
+WSL ubuntu command prompt, com13 mapped to USB bus 001 device 002
+```
+lsusb
+```
+![usbip_com13_setup.JPG](usbip_com13_setup.JPG)  
