@@ -14,27 +14,30 @@ cd ~/esp/ESP8266_RTOS_SDK
 sudo ./install.sh
 . ./export.sh
 cd ~/esp/ESP8266_RTOS_SDK/examples/get-started/hello_world
+make menuconfig
 make
 ```
+![ESP8266_RTOS_SDK_setup_done.JPG](ESP8266_RTOS_SDK_setup_done.JPG)  
 
+### esputil, flash programming tool setup,  
+```
+cd ~/esp
 git clone https://github.com/cpq/esputil
 cd esputil
+ls -l
 make
-pip install --upgrade pip
-sudo /home/xiao/esp/ESP8266_RTOS_SDK/install.sh
-. /home/xiao/esp/ESP8266_RTOS_SDK/export.sh
-git clone https://github.com/cpq/esputil
-cd ~/esp/ESP8266_RTOS_SDK/examples/get-started/hello_world
-make menuconfig
-
-
 ```
+![esputil_setup_done.JPG](esputil_setup_done.JPG)  
 
-source code,
+
+### lolra, try to build the firmware,  
 ```
+cd ~/esp
 git clone --recurse-submodules https://github.com/cnlohr/lolra
-~/esp/ESP8266_RTOS_SDK/lolra/esp8266/example_125k_raw
+cd lolra/esp8266/example_125k_raw
+ls -l
 make
-
+ls- l
 ```
+![example_125k_raw_done.JPG](example_125k_raw_done.JPG)  
 
